@@ -1,0 +1,63 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:style>
+		
+	</ui:style>
+
+	<g:LayoutPanel ui:field="main" styleName="mainBox">
+		<g:layer>
+			<g:SimplePanel styleName="gradient-tl"></g:SimplePanel>
+		</g:layer>
+		<g:layer right="0px" width="388px">
+			<g:SimplePanel styleName="gradient-tr"></g:SimplePanel>
+		</g:layer>
+		<g:layer bottom="0px" height="189px">
+			<g:SimplePanel styleName="gradient-bl"></g:SimplePanel>
+		</g:layer>
+		<g:layer right="0px" width="388px" bottom="0px" height="189px">
+			<g:SimplePanel styleName="gradient-br"></g:SimplePanel>
+		</g:layer>
+		<g:layer top="0px" height="137px" left="0px" right="30%">
+			<g:HorizontalPanel ui:field="topPanel" styleName="header">
+				<g:FocusPanel ui:field="logo" styleName="top-button logo">
+				</g:FocusPanel>
+<!-- 				<g:FocusPanel ui:field="upload" styleName="top-button upload"> -->
+<!-- 				</g:FocusPanel> -->
+<!-- 				<g:FocusPanel ui:field="download" styleName="top-button download"> -->
+<!-- 				</g:FocusPanel> -->
+<!-- 				<g:FocusPanel ui:field="generate" styleName="top-button generate"> -->
+<!-- 				</g:FocusPanel> -->
+
+			</g:HorizontalPanel>
+		</g:layer>
+
+		<g:layer top="137px" bottom="190px" left="0px" right="30%">
+			<g:SimpleLayoutPanel ui:field="questionbox"
+				styleName="mainBox question">
+				<g:TextArea ui:field="question" styleName="question-text"></g:TextArea>
+			</g:SimpleLayoutPanel>
+		</g:layer>
+
+		<g:layer bottom="0px" height="190px" left="0px" right="30%">
+			<g:SimpleLayoutPanel ui:field="imagesbox"
+				styleName="mainBox images">
+<!-- 				<g:ScrollPanel ui:field="imagesScroll" styleName="igor-image-scroll"> -->
+<!-- 					<g:HorizontalPanel styleName="igor-image-container" ui:field="images"></g:HorizontalPanel> -->
+<!-- 				</g:ScrollPanel> -->
+			</g:SimpleLayoutPanel>
+		</g:layer>
+
+		<g:layer top="0px" height="50%" right="0px" width="30%">
+			<g:SimpleLayoutPanel ui:field="featuresbox"
+				styleName="mainBox features">
+			</g:SimpleLayoutPanel>
+		</g:layer>
+
+		<g:layer top="50%" bottom="0px" right="0px" width="30%">
+			<g:SimpleLayoutPanel ui:field="attributesbox" styleName="mainBox attributes">
+			</g:SimpleLayoutPanel>
+		</g:layer>
+
+	</g:LayoutPanel>
+
+</ui:UiBinder>

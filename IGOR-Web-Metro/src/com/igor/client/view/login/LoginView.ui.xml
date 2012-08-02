@@ -1,0 +1,45 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:style>
+		.loginbox {
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+		}
+		.error {
+			color: #7C0000;
+			
+		}
+	</ui:style>
+	<g:LayoutPanel>
+		<g:layer top="20%" height="300px">
+			<g:LayoutPanel styleName="{style.loginbox}">
+				<g:layer>
+					<g:SimplePanel styleName="box-double">
+
+					</g:SimplePanel>
+				</g:layer>
+				<g:layer top="50px" height="100px" left="300px" right="0px">
+					<g:FlowPanel width="100%">
+						<g:TextBox ui:field="username" styleName="login-text">User Name</g:TextBox>
+						<g:PasswordTextBox ui:field="password"
+							styleName="login-text">Password</g:PasswordTextBox>
+					</g:FlowPanel>
+				</g:layer>
+				<g:layer right="15px" width="100px" height="50px" bottom="85px">
+					<g:SimplePanel>
+						<g:Button ui:field="login">log in</g:Button>
+					</g:SimplePanel>
+				</g:layer>
+				<g:layer left="25px" right="15px" height="40px" bottom="5px">
+					<g:Label ui:field="error" styleName="{style.error}">
+					</g:Label>
+				</g:layer>
+
+			</g:LayoutPanel>
+
+
+		</g:layer>
+	</g:LayoutPanel>
+
+</ui:UiBinder>

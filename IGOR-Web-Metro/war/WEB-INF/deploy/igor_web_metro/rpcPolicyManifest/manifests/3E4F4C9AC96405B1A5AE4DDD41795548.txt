@@ -1,0 +1,2 @@
+serviceClass: com.igor.client.ModelService
+path: 19E591B2C007FFCD1F08E32CD18DF693.gwt.rpc
