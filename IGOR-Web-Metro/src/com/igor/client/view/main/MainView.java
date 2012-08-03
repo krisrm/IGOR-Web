@@ -140,7 +140,6 @@ public class MainView extends Composite {
 
 					@Override
 					public void onSuccess(TemplateDTO result) {
-						System.out.println(result);
 						MainView.this.setTemplate(result);
 					}
 				});
@@ -271,7 +270,6 @@ public class MainView extends Composite {
 
 	protected void displayGenerated(String url) {
 		// Window.alert(GWT.getHostPageBaseURL() + url);
-		System.out.println(url);
 		Cookies.setCookie("animate-main", "false");
 		Window.Location.assign(GWT.getHostPageBaseURL() + url);
 	}

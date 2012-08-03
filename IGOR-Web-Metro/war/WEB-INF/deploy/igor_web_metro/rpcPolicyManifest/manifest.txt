@@ -1,3 +1,2 @@
 # Module igor_web_metro
 # RPC service class, partial path of RPC policy file
-com.igor.client.ModelService, 19E591B2C007FFCD1F08E32CD18DF693.gwt.rpc

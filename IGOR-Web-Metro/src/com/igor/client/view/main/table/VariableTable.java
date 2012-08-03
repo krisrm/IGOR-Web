@@ -248,7 +248,6 @@ public class VariableTable extends Composite {
 	}
 	
 	public void update(){
-		System.out.println("updating");
 		if (editing == null)
 			return;
 		int row = editing.getRowIndex();

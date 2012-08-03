@@ -63,7 +63,6 @@ public class MediaUploadServlet extends FileUploadServlet {
 	// @Override
 	// public String executeAction(HttpServletRequest request,
 	// List<FileItem> sessionFiles) throws UploadActionException {
-	// System.out.println("STARTING UPLOAD");
 	// User u = ModelServiceImpl.currentUser(this.getServletContext(),
 	// getThreadLocalRequest().getSession().getId());
 	// if (u == null)
@@ -80,7 +79,6 @@ public class MediaUploadServlet extends FileUploadServlet {
 	// String id = new File(root).listFiles().length + ""
 	// + ((int) (Math.random() * 10000));
 	// String filename = root + id;
-	// System.out.println(filename);
 	// File file = new File(filename);
 	// item.write(file);
 	//

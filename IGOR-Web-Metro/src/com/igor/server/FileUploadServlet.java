@@ -27,19 +27,16 @@ public abstract class FileUploadServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-//		System.out.println(req.getContentType());
 		
 		FileItemFactory factory = new DiskFileItemFactory();
 		ServletFileUpload upload = new ServletFileUpload(factory);
 
 		try {
 			List<FileItem> items = upload.parseRequest(req);
-//			System.out.println(items);
 			for (FileItem item : items) {
 				if (item.isFormField())
 					continue;
 				String r = handleUpload(req, resp, item);
-				System.out.println(r);
 				resp.getWriter().print(r);
 			}
 		} catch (Exception e) {

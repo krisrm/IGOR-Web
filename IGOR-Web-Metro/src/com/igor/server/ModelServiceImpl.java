@@ -153,8 +153,6 @@ public class ModelServiceImpl extends RemoteServiceServlet implements
 	@Override
 	public String generate(TemplateDTO template) {
 		try {
-			System.out.println("GENERATING");
-			System.out.println(template);
 			User u = currentUser();
 			if (u == null || u.name.equals("guest")) {
 				return null;
@@ -186,11 +184,6 @@ public class ModelServiceImpl extends RemoteServiceServlet implements
 			templateFile.deleteOnExit();
 			ansKeyFile.deleteOnExit();
 
-			// System.out.println(FileUtils.readFileToString(templateFile));
-			// System.out.println("---------------------");
-			// System.out.println(FileUtils.readFileToString(ansKeyFile));
-			// System.out.println("---------------------");
-			// System.out.println(FileUtils.readFileToString(itemBankFile));
 			return "file?type=generate";
 			// return itemBankFile.getPath();
 		} catch (Exception e) {
@@ -222,33 +215,22 @@ public class ModelServiceImpl extends RemoteServiceServlet implements
 
 	@Override
 	public String download(TemplateDTO template) throws Exception {
-		System.out.println("downloading");
-		System.out.println(template);
 //		if (2+2==4)
 //			throw new Exception("crazy");
 		try {
-			System.out.println("1");
 			User u = currentUser();
-			System.out.println("2");
 			if (u == null || u.name.equals("guest")) {
 				return null;
 			}
-			System.out.println("3");
 			XMLBuilder b = new XMLBuilder(toModel(template));
-			System.out.println("4");
 			// String path = "xml/" + Math.random() * 10000 + ".xml";
 			// File f = new File(getPath(path));
 //			File f = File.createTempFile("download", ".tmp");
-//			System.out.println("5");
 //			b.saveToXML(f);
-//			System.out.println("6");
 //			u.download = FileUtils.readFileToByteArray(f);
 			u.download = b.printToByteArray();
-			System.out.println("5");
 			saveUser(u);
-			System.out.println("6");
 //			f.deleteOnExit();
-//			System.out.println("9");
 			return "file?type=download";
 		} catch (Exception e) {
 			LOG.log(Level.SEVERE, "download error", e);

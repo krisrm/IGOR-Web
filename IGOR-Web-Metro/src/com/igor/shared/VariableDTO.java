@@ -110,7 +110,6 @@ public class VariableDTO implements IsSerializable {
 	}
 
 	public int[] getIntKeysUrl() {
-		System.out.println(urls);
 		if (urls == null || urls.size() == 0)
 			return new int[] {};
 		int[] r = new int[urls.size()];

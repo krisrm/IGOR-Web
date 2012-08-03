@@ -95,7 +95,6 @@ class ImageEdit extends AttributeEditor.Editor implements IGORImage.CanSelect {
 					modelUrls.add(i.getUrl());
 				
 				ImageEdit.this.attributeEditor.current.urls = modelUrls;
-				System.out.println(modelUrls);
 			}
 		});
 	}
